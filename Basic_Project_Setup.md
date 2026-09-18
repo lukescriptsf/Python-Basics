@@ -1,6 +1,6 @@
-# [Project Name]
+# Basics Python Project Setup
 
-> A brief description of what this project does and the problem it solves.
+> In this File I explain the basic setup of a Python Project and how to locally run and pull the git Project.
 
 ## 🛠️ Prerequisites
 
