@@ -1,69 +1,58 @@
-# Setting Up a new Project under MacOS
+# New Python Project Setup Guide
 
 > A brief description of what this project does and the problem it solves.
 
 ## 🛠️ Prerequisites
 
 Before you begin, ensure you have the following installed on your macOS machine:
-- **Git** (Usually comes pre-installed with Xcode Command Line Tools)
+- **Visual Studio Code**
+- **Git** (Usually installed automatically when you type `git` in the terminal for the first time)
 - **Python 3** (Recommended to install via [Homebrew](https://brew.sh/): `brew install python`)
 
 ---
 
-## 🚀 Local Setup & Development (macOS)
+## 🚀 Local Setup in VS Code (macOS)
 
-Follow these steps to set up the project locally on your Mac.
+Follow these steps to set up and run the project using Visual Studio Code.
 
-### 1. Clone the Repository
-Open your terminal (Terminal.app or iTerm2) and clone this repository:
+### 1. Clone & Open the Repository
+Open your standard macOS Terminal and clone the repository. Then, use the `code` command to open the folder directly in Visual Studio Code:
 ```zsh
 git clone [https://github.com/yourusername/your-repo-name.git](https://github.com/yourusername/your-repo-name.git)
 cd your-repo-name
+code .
 ```
+*(VS Code will now open. You can close your external macOS terminal and do everything else inside VS Code).*
 
-### 2. Set Up a Virtual Environment
-It is highly recommended to use a virtual environment (`venv`) to keep project dependencies isolated from your macOS system packages. 
+### 2. Open the VS Code Integrated Terminal
+In Visual Studio Code, open the integrated terminal by pressing:
+- **`⌃` + `` ` ``** (Control + Backtick) 
+- Alternatively, go to the top menu: **Terminal > New Terminal**.
 
-*(Note: On macOS, you often need to use `python3` instead of just `python`)*
+### 3. Set Up the Virtual Environment
+In the VS Code terminal, create an isolated virtual environment (`venv`) for your project:
 ```zsh
-# Create the virtual environment
 python3 -m venv venv
 ```
 
-### 3. Activate the Virtual Environment
-Activate the isolated environment for your current terminal session:
+**Important:** After running this command, VS Code might show a popup in the bottom right corner asking: *"We noticed a new environment has been created. Do you want to select it for the workspace folder?"* -> **Click "Yes"**.
+
+### 4. Activate the Virtual Environment
+Activate the environment in your current VS Code terminal:
 ```zsh
 source venv/bin/activate
 ```
 *(You will know it worked when your terminal prompt starts with `(venv)`).*
 
-### 4. Install Dependencies
-Once the virtual environment is active, install all required packages using `pip`:
+### 5. Install Dependencies
+With the environment active, install all required packages:
 ```zsh
 pip install -r requirements.txt
 ```
 
-*Note for developers: If you install new packages (e.g., `pip install flask`), remember to update the requirements file by running `pip freeze > requirements.txt`.*
-
-### 5. Run the Project
-Start the application or script. Once the virtual environment is active, you can use the standard `python` command:
+### 6. Run the Project
+You can now run your code directly from the terminal:
 ```zsh
 python main.py  # Replace 'main.py' with your actual starting script
 ```
-
----
-
-## 🧹 Useful macOS Commands
-
-If you need to leave the virtual environment, simply run:
-```zsh
-deactivate
-```
-
-If you ever need to completely reset your project dependencies, you can safely delete the virtual environment folder and recreate it:
-```zsh
-rm -rf venv
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-```
+*(Alternatively, you can use the "Run" button ▶️ in the top right corner of VS Code).*
