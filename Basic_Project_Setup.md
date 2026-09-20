@@ -1,4 +1,4 @@
-# New Python Project Setup Guide
+# New Python Project Setup Guide under MacOS
 
 > A brief description of what this project does and the problem it solves.
 
