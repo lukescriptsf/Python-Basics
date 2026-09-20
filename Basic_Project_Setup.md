@@ -1,4 +1,4 @@
-# [Project Name]
+# Setting Up a new Project under MacOS
 
 > A brief description of what this project does and the problem it solves.
 
