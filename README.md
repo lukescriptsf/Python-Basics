@@ -30,6 +30,12 @@ python3 --version
 It is best practice to isolate your project dependencies using a virtual environment. Run the following commands in your project folder:
 
 ```bash
+# Create a new Folder in your local Folder
+mkdir projectname
+
+# Go into the folder
+cd projectname
+
 # Create a virtual environment named 'venv'
 python3 -m venv venv
 
